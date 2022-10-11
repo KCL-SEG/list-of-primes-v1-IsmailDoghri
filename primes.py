@@ -3,4 +3,15 @@
 
 def primes(number_of_primes):
     list = []
+    n = 2
+    prime = True
+    while len(list) < number_of_primes:
+        for i in range(2, n):
+            if n % i == 0:
+                prime = False
+        if prime:
+            list.append(n)
+        n += 1
+        prime = True
+
     return list
